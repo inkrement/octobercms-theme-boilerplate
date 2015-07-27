@@ -1,4 +1,4 @@
-# Emil's Nuke-Proof October CMS Boilerplate #
+# Emil's Exemplary October CMS Boilerplate #
 
 ## A basic front end web boilerplate aimed at rapid set up for October CMS web projects. ##
 
