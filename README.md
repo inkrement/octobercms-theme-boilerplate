@@ -1,6 +1,8 @@
-# Emil's Nuke-Proof, Intergalactic Boilerplate #
+# Emil's Nuke-Proof October CMS Boilerplate #
 
-## A basic front end web boilerplate aimed at rapid set up for web projects. ##
+## A basic front end web boilerplate aimed at rapid set up for October CMS web projects. ##
+
+Based on [Emil's Nuke-Proof, Intergalactic Boilerplate](https://github.com/ChewyJetpack/Emil-s-Nuke-Proof-Intergalactic-Front-End-Boilerplate) and loosely inspired by andradedev's [October Cms Themes Devworkflow](https://github.com/andradedev/October-Cms-Devworkflow).
 
 Installation:
 
