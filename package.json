@@ -1,7 +1,7 @@
 {
-  "name": "emils-nuke-proof-intergalactic-boilerplate",
+  "name": "emils-exemplary-october-cms-boilerplate",
   "version": "1.0.0",
-  "description": "A basic front end web boilerplate aimed at rapid set up for web projects.",
+  "description": "A basic front end web boilerplate aimed at rapid set up for October CMS web projects.",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -18,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ChewyJetpack@bitbucket.org/ChewyJetpack/emils-nuke-proof-intergalactic-boilerplate.git"
+    "url": "git+https://github.com/ChewyJetpack/Emil-s-Exemplary-October-CMS-Boilerplate.git"
   },
   "author": "Emil Smith",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ChewyJetpack/emils-nuke-proof-intergalactic-boilerplate#readme"
+  "homepage": "https://github.com/ChewyJetpack/Emil-s-Exemplary-October-CMS-Boilerplate#readme"
 }
