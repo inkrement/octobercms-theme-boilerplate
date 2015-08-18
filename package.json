@@ -6,10 +6,13 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
+    "gulp-bower": "0.0.10",
+    "main-bower-files": "^2.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.2.0",
     "gulp-minify-css": "^1.2.0",
     "gulp-notify": "^2.2.0",
+    "gulp-order": "^1.1.1",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.2.0"
   },
@@ -18,9 +21,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChewyJetpack/Emil-s-Exemplary-October-CMS-Boilerplate.git"
+    "url": "git+https://ChewyJetpack@bitbucket.org/ChewyJetpack/emils-nuke-proof-intergalactic-boilerplate.git"
   },
   "author": "Emil Smith",
   "license": "ISC",
-  "homepage": "https://github.com/ChewyJetpack/Emil-s-Exemplary-October-CMS-Boilerplate#readme"
+  "homepage": "https://bitbucket.org/ChewyJetpack/emils-nuke-proof-intergalactic-boilerplate#readme"
 }

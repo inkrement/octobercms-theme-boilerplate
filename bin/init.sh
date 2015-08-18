@@ -9,6 +9,4 @@ mkdir src/js
 mkdir src/sass
 mkdir pages
 mkdir layouts
-bower install
 npm install
-gulp components
