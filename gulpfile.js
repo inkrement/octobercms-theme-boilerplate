@@ -1,14 +1,14 @@
-var gulp 			= require('gulp');
-var uglify 			= require('gulp-uglify');
-var concat 			= require('gulp-concat');
-var concat_css 		= require('gulp-concat-css');
-var minify 			= require('gulp-minify-css');
-var sass 			= require('gulp-sass');
-var autoprefix 		= require('gulp-autoprefixer');
-var notify 			= require('gulp-notify');
-var bower          	= require('gulp-bower');
-var bower_files 	= require('main-bower-files');
-var order          	= require('gulp-order');
+var gulp			= require('gulp');
+var uglify			= require('gulp-uglify');
+var concat			= require('gulp-concat');
+var concat_css		= require('gulp-concat-css');
+var minify			= require('gulp-minify-css');
+var sass			= require('gulp-sass');
+var autoprefix		= require('gulp-autoprefixer');
+var notify			= require('gulp-notify');
+var bower			= require('gulp-bower');
+var bower_files		= require('main-bower-files');
+var order			= require('gulp-order');
 
 gulp.task('bower', function() {
     return bower();
@@ -55,7 +55,7 @@ gulp.task('vendor-fonts', ['bower'], function () {
 
     return gulp 
         .src(bower_fonts)
-        .pipe(gulp.dest('dist/fonts/'))       
+        .pipe(gulp.dest('assets/fonts/'))       
         .pipe(notify({
 	      message: 'vendor fonts'
 	    }));
@@ -66,7 +66,7 @@ gulp.task('scripts', ['vendor-scripts'], function () {
 	return gulp.src('src/js/*.js')
 	.pipe(concat('all.min.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('dist/js'))
+	.pipe(gulp.dest('assets/js'))
 	.pipe(notify({
       message: 'all js minified and concatenated'
     }));
@@ -80,7 +80,7 @@ gulp.task('sass', ['vendor-css'], function () {
       cascade: false
     }))
     .pipe(minify())
-	.pipe(gulp.dest('dist/css'))
+	.pipe(gulp.dest('assets/css'))
 	.pipe(notify({
       message: 'all scss compiled'
     }));
@@ -90,7 +90,7 @@ gulp.task('css', ['vendor-css'], function () {
 	return gulp.src('src/css/*.css')
 	.pipe(concat_css('all.min.css'))
 	.pipe(minify())
-	.pipe(gulp.dest('dist/css'))
+	.pipe(gulp.dest('assets/css'))
 	.pipe(notify({
       message: 'all css minified and concatenated'
     }));
