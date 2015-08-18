@@ -11,89 +11,97 @@ var bower_files		= require('main-bower-files');
 var order			= require('gulp-order');
 
 gulp.task('bower', function() {
-    return bower();
+	return bower();
 });
 
 gulp.task('vendor-scripts', ['bower'], function () {
 
-    // Bower scripts
-    var bower_scripts = bower_files('**/*.js');
+	// Bower scripts
+	var bower_scripts = bower_files('**/*.js');
 
-    return gulp 
-        .src(bower_scripts)
-        .pipe(order([
-            'jquery.min.js',
-            '**/*.js'
-        ]))
-        .pipe(concat('vendor.js'))
-        .pipe(gulp.dest('src/js/'))
-        .pipe(notify({
-	      message: 'vendor js'
-	    }))
+	return gulp 
+		.src(bower_scripts)
+		.pipe(order([
+			'jquery.min.js',
+			'**/*.js'
+		]))
+		.pipe(concat('vendor.js'))
+		.pipe(gulp.dest('src/js/'))
+		.pipe(notify({
+		  message: 'vendor js'
+		}))
 
 });
 
 gulp.task('vendor-css', ['bower'], function () {
-    
-    // Bower css
-    var bower_css = bower_files('**/*.css');
+	
+	// Bower css
+	var bower_css = bower_files('**/*.css');
 
-    return gulp 
-        .src(bower_css)
-        .pipe(concat_css('vendor.css'))
-        .pipe(gulp.dest('src/css/'))
-        .pipe(notify({
-	      message: 'vendor css'
-	    }));
+	return gulp 
+		.src(bower_css)
+		.pipe(concat_css('vendor.css'))
+		.pipe(gulp.dest('src/css/'))
+		.pipe(notify({
+		  message: 'vendor css'
+		}));
 
 });
 
 gulp.task('vendor-fonts', ['bower'], function () {
-    
-    // Bower fonts
-    var bower_fonts = bower_files('**/fonts/*.*');
+	
+	// Bower fonts
+	var bower_fonts = bower_files('**/fonts/*.*');
 
-    return gulp 
-        .src(bower_fonts)
-        .pipe(gulp.dest('assets/fonts/'))       
-        .pipe(notify({
-	      message: 'vendor fonts'
-	    }));
+	return gulp 
+		.src(bower_fonts)
+		.pipe(gulp.dest('assets/fonts/'))       
+		.pipe(notify({
+		  message: 'vendor fonts'
+		}));
 
 });
 
 gulp.task('scripts', ['vendor-scripts'], function () {
 	return gulp.src('src/js/*.js')
+	.pipe(order([
+		'vendor.js',
+		'**/*.js'
+	]))
 	.pipe(concat('all.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('assets/js'))
 	.pipe(notify({
-      message: 'all js minified and concatenated'
-    }));
+	  message: 'all js minified and concatenated'
+	}));
 });
 
 gulp.task('sass', ['vendor-css'], function () {
 	return gulp.src('src/sass/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(autoprefix({
-      browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
-      cascade: false
-    }))
-    .pipe(minify())
-	.pipe(gulp.dest('assets/css'))
+	  browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
+	  cascade: false
+	}))
+	.pipe(minify())
+	.pipe(gulp.dest('src/css'))
 	.pipe(notify({
-      message: 'all scss compiled'
-    }));
+	  message: 'all scss compiled'
+	}));
 });
 
-gulp.task('css', ['vendor-css'], function () {
+gulp.task('css', ['vendor-css', 'sass'], function () {
 	return gulp.src('src/css/*.css')
+	.pipe(order([
+		'vendor.css',
+		'**/*.css'
+	]))
 	.pipe(concat_css('all.min.css'))
 	.pipe(minify())
 	.pipe(gulp.dest('assets/css'))
 	.pipe(notify({
-      message: 'all css minified and concatenated'
-    }));
+	  message: 'all css minified and concatenated'
+	}));
 });
 
 gulp.task('watch', function () {
