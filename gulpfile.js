@@ -105,11 +105,14 @@ gulp.task('css', ['vendor-css', 'sass'], function () {
 });
 
 gulp.task('sass:watch', function () {
-	return gulp.watch('src/sass/*.scss', ['sass']);
+	return gulp.watch('src/sass/*.scss', ['css']);
 });
 
 gulp.task('all:watch', function () {
-	return gulp.watch('src/**/*.*', ['sass', 'css', 'scripts']);
+	gulp.watch('src/js/*.*', ['scripts']);
+	gulp.watch(['src/css/*.*', 'src/sass/*.*'], ['css']);
 });
 
-gulp.task('default', ['vendor-fonts', 'sass', 'css', 'scripts']);
+gulp.task('default', function() {
+	run_sequence('bower', 'vendor-fonts','css', 'scripts');
+});
