@@ -17,8 +17,6 @@
   "dependencies": {
     "fontawesome": "~4.3.0",
     "just-grid-it": "~0.0.3",
-    "jQuery": "~2.1.4",
-    "jQuery.mmenu": "~5.3.3",
-    "swipebox": "~1.4.1"
+    "jQuery": "~2.1.4"
   }
 }

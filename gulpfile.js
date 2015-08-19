@@ -104,8 +104,12 @@ gulp.task('css', ['vendor-css', 'sass'], function () {
 	}));
 });
 
-gulp.task('watch', function () {
+gulp.task('sass:watch', function () {
 	return gulp.watch('src/sass/*.scss', ['sass']);
+});
+
+gulp.task('all:watch', function () {
+	return gulp.watch('src/**/*.*', ['sass', 'css', 'scripts']);
 });
 
 gulp.task('default', ['vendor-fonts', 'sass', 'css', 'scripts']);
