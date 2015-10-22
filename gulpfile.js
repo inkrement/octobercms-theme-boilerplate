@@ -9,6 +9,7 @@ var notify			= require('gulp-notify');
 var bower			= require('gulp-bower');
 var bower_files		= require('main-bower-files');
 var order			= require('gulp-order');
+var run_sequence	= require('run-sequence');
 
 gulp.task('bower', function() {
 	return bower();
