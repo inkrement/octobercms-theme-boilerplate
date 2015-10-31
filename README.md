@@ -18,6 +18,9 @@ Installation:
 
 
 If you got an error like below:
-    ECMDERR Failed to execute "git ls-remote --tags --heads git://github.com/components/font-awesome.git"
-Run 'https://github.com/components/font-awesome.git'
-Then run 'gulp' again
+
+`ECMDERR Failed to execute "git ls-remote --tags --heads git://github.com/components/font-awesome.git"`
+
+1. Run 'https://github.com/components/font-awesome.git'
+
+2. Then run 'gulp' again
