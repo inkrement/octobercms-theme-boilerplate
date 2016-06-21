@@ -1,0 +1,16 @@
+title = "Detail"
+url = "/work/:slug"
+layout = "default"
+is_hidden = 0
+meta_title = "Work Detail"
+meta_description = "Raba Rama Studio: We are not magician, but our work is magical."
+
+[WorkDetail]
+slug = "{{ :slug }}"
+==
+<div class="single-work">
+	{% component 'WorkDetail' %}
+</div>
+{% put scripts %}
+    <script>!function(a,b,c,d){"use strict";a(function(){a(".video-embed").fitVids()})}(jQuery,window,document);</script>
+{% endput %}

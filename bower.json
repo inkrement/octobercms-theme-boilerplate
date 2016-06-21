@@ -15,8 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "~4.3.0",
-    "just-grid-it": "~0.0.3",
-    "jQuery": "~2.1.4"
+    "jQuery": "~2.1.4",
+    "bourbon": "~4.2.6",
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery.fitvids": "fitvids#~1.1.0",
+    "modernizr-min": "~3.1.0"
   }
 }

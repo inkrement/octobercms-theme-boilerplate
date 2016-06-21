@@ -1,0 +1,31 @@
+@mixin border-radius($radius) {
+  @include prefixer(border-radius, $radius, webkit ms o moz spec);
+}
+@mixin translate3d($a, $b, $c) {
+  -moz-transform: translate3d($a, $b, $c);
+  -o-transform: translate3d($a, $b, $c);
+  -webkit-transform: translate3d($a, $b, $c);
+  transform: translate3d($a, $b, $c);
+}
+@mixin opacity($value) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
+	filter: alpha(opacity=$value);
+	-moz-opacity: $value;
+	-khtml-opacity: $value;
+	opacity: $value;
+}
+@mixin box-shadow($input) {
+  @include prefixer(box-shadow, $input, webkit ms o moz spec);
+}
+@mixin text-shadow($input) {
+  @include prefixer(text-shadow, $input, webkit ms o moz spec);
+}
+@mixin background-size($input) {
+  @include prefixer(background-size, $input, webkit ms o moz spec);
+}
+// @mixin grayscale($value) {
+//   -webkit-filter: #{"grayscale(#{$value})"};
+//   -moz-filter: #{"grayscale(#{$value})"};
+//   -o-filter: #{"grayscale(#{$value})"};
+//   filter: #{"grayscale(#{$value})"};
+// }

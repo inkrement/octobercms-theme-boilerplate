@@ -1,0 +1,155 @@
+@keyframes animateone {
+  0% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 1;
+  }
+  12.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animatetwo {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 0;
+  }
+  12.5% {
+  opacity: 1;
+  }
+  24.5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animatethree {
+  0% {
+    opacity: 0;
+  }
+  24.5% {
+    opacity: 0;
+  }
+  25% {
+  opacity: 1;
+  }
+  37% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animatefour {
+  0% {
+    opacity: 0;
+  }
+  37% {
+    opacity: 0;
+  }
+  37.5% {
+  opacity: 1;
+  }
+  49.5% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animatefive {
+  0% {
+    opacity: 0;
+  }
+  49.5% {
+    opacity: 0;
+  }
+  50% {
+  opacity: 1;
+  }
+  62% {
+    opacity: 1;
+  }
+  62.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animatesix {
+  0% {
+    opacity: 0;
+  }
+  62% {
+    opacity: 0;
+  }
+  62.5% {
+  opacity: 1;
+  }
+  74.5% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateseven {
+  0% {
+    opacity: 0;
+  }
+  74.5% {
+    opacity: 0;
+  }
+  75% {
+  opacity: 1;
+  }
+  87% {
+    opacity: 1;
+  }
+  87.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateeight {
+  0% {
+    opacity: 0;
+  }
+  87% {
+    opacity: 0;
+  }
+  87.5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

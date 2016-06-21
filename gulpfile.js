@@ -22,6 +22,7 @@ gulp.task('vendor-scripts', ['bower'], function () {
 
 	return gulp 
 		.src(bower_scripts)
+		.pipe(gulp.src("**/*.js"))
 		.pipe(order([
 			'jquery.min.js',
 			'**/*.js'
@@ -65,6 +66,7 @@ gulp.task('vendor-fonts', ['bower'], function () {
 
 gulp.task('scripts', ['vendor-scripts'], function () {
 	return gulp.src('src/js/*.js')
+	.pipe(gulp.src("**/*.js"))
 	.pipe(order([
 		'vendor.js',
 		'**/*.js'
@@ -78,7 +80,7 @@ gulp.task('scripts', ['vendor-scripts'], function () {
 });
 
 gulp.task('sass', ['vendor-css'], function () {
-	return gulp.src('src/sass/*.scss')
+	return gulp.src('src/sass/style.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(autoprefix({
 	  browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
@@ -105,11 +107,7 @@ gulp.task('css', ['vendor-css', 'sass'], function () {
 	}));
 });
 
-gulp.task('sass:watch', function () {
-	return gulp.watch('src/sass/*.scss', ['css']);
-});
-
-gulp.task('all:watch', function () {
+gulp.task('watch:all', function () {
 	gulp.watch('src/js/*.*', ['scripts']);
 	gulp.watch(['src/css/*.*', 'src/sass/*.*'], ['css']);
 });
