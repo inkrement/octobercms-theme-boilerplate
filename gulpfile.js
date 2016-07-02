@@ -18,10 +18,9 @@ gulp.task('bower', function() {
 
 gulp.task('vendor-scripts', ['bower'], function () {
 
-	return gulp 
+	return gulp
 		.src([
-			'bower_components/jQuery/dist/jquery.min.js',
-			'bower_components/jquery.fitvids/jquery.fitvids.js'
+			'bower_components/jquery/dist/jquery.min.js',
 		])
 		.pipe(concat('vendor.js'))
 		.pipe(gulp.dest('src/js/'))
@@ -32,11 +31,11 @@ gulp.task('vendor-scripts', ['bower'], function () {
 });
 
 gulp.task('vendor-css', ['bower'], function () {
-	
+
 	// Bower css
 	var bower_css = bower_files('**/*.css');
 
-	return gulp 
+	return gulp
 		.src(bower_css)
 		.pipe(concat_css('vendor.css'))
 		.pipe(gulp.dest('src/css/'))
@@ -47,13 +46,13 @@ gulp.task('vendor-css', ['bower'], function () {
 });
 
 gulp.task('vendor-fonts', ['bower'], function () {
-	
+
 	// Bower fonts
 	var bower_fonts = bower_files('**/fonts/*.*');
 
-	return gulp 
+	return gulp
 		.src(bower_fonts)
-		.pipe(gulp.dest('assets/fonts/'))       
+		.pipe(gulp.dest('assets/fonts/'))
 		.pipe(notify({
 		  message: 'vendor fonts'
 		}));

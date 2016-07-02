@@ -11,7 +11,7 @@ Clone this repository, open a terminal and navigate into this folder. Then run t
 
 ```
 npm install
-gulp run
+gulp
 ```
 
 ## Usage
