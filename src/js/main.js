@@ -113,11 +113,4 @@
     //     return check;
     // }
 
-  $(function () {
-
-      // $("img.lazy").lazyload();
-      $('.video-embed').fitVids();
-
-  });
-
 })(jQuery, window, document);

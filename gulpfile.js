@@ -45,6 +45,15 @@ gulp.task('vendor-css', ['bower'], function () {
 
 });
 
+gulp.task('bootstrap', function() {
+  gulp.src('bower_components/bootstrap/scss/bootstrap.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(minify())
+    .pipe(gulp.dest('src/css/')).pipe(notify({
+		  message: 'bootstrap compiled!'
+		}));
+});
+
 gulp.task('vendor-fonts', ['bower'], function () {
 
 	// Bower fonts
@@ -86,9 +95,10 @@ gulp.task('sass', ['vendor-css'], function () {
 	}));
 });
 
-gulp.task('css', ['vendor-css', 'sass'], function () {
+gulp.task('css', ['vendor-css', 'sass', 'bootstrap'], function () {
 	return gulp.src([
 		'src/css/vendor.css',
+		'src/css/bootstrap.css',
 		'src/css/style.css'
 	])
 	.pipe(concat_css('all.min.css'))
