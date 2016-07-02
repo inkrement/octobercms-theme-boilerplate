@@ -11,12 +11,13 @@ Clone this repository, open a terminal and navigate into this folder. Then run t
 
 ```
 npm install
+gulp run
 ```
 
 ## Usage
 Call the following command. It will recognize file changes and re-compiles all your files.
 ```
-gunt watch
+gulp watch
 ```
 
 ## Credits
