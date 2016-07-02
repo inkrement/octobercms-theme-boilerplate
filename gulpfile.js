@@ -127,7 +127,7 @@ gulp.task('image-min', function () {
 gulp.task('watch', function () {
 	gulp.watch('src/images/*.*', ['image-min']);
 	gulp.watch('src/js/*.*', ['scripts']);
-	gulp.watch(['src/css/*.*', 'src/sass/*.*'], ['css']);
+	gulp.watch('src/sass/*.*', ['css']);
 });
 
 gulp.task('default', function() {
