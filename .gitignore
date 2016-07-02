@@ -1,3 +1,7 @@
+assets/js/all.min.js
+assets/css/all.min.css
+src
+
 # Numerous always-ignore extensions
 *.diff
 *.err

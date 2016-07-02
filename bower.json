@@ -1,12 +1,12 @@
 {
-  "name": "Emil's Exemplary October CMS Boilerplate",
+  "name": "octobercms-theme-boilerplate",
   "description": "A basic front end web boilerplate aimed at rapid set up for October CMS web projects.",
   "version": "1.0.0",
   "authors": [
-    "Emil Smith"
+    "Christian Hotz-Behofsits"
   ],
   "license": "MIT",
-  "homepage": "http://emilsmith.com",
+  "homepage": "http://justrocketscience.com",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,10 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "jQuery": "~2.1.4",
-    "jquery.fitvids": "fitvids#~1.1.0",
     "bourbon": "~4.2.6",
-    "normalize-css": "normalize.css#~3.0.3",
-    "modernizr-min": "~3.1.0"
+    "bootstrap": "4.0"
   }
 }
