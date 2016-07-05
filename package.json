@@ -25,8 +25,11 @@
   "author": "Christian Hotz-Behofsits",
   "license": "MIT",
   "homepage": "https://github.com/inkrement/octobercms-theme-boilerplate",
-  "repository" : { 
-    "type" : "git",
-    "url" : "https://github.com/inkrement/octobercms-theme-boilerplate.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inkrement/octobercms-theme-boilerplate.git"
+  },
+  "dependencies": {
+    "gulp-flatten": "^0.3.0"
   }
 }

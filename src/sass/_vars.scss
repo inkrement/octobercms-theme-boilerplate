@@ -1,34 +1,5 @@
-$mobile-wide 	: 340px;
-$tablet 		: 569px;
-$tablet-wide 	: 768px;
-$desktop 		: 1020px;
-$desktop-medium : 1200px;
-$desktop-big 	: 1370px;
+$font-path: "/themes/catgroove/assets/fonts";
 
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
-$lato:              'Lato', $sans-serif;
-
-$font-montserrat : 'Montserrat', $sans-serif;
-$font-libre : 'Libre Baskerville', $serif;
-
-$alert-yellow:      #ebe16f;
-$alert-red:         #fbe3e4;
-$alert-green:       #e6efc2;
-$alert-blue:        #d5edf8;
-$black:             #323944;
-$white:             #fff;
-$light-gray:        #f8f9fa;
-$gray:              #eaedf2;
-$text-color:        #5c6b80;
-$meta-gray:         #9fa6b4;
-$tan:               #eceee5;
-$green:             #7dd667;
-$bones-pink:        #f01d4f;
-$blue:              #2980b9;
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
-$border-color:      #ccc;
-$disabled-gray:     #cfcfcf;
-
-$clr-brand: #F72E2A;
+//font awesome
+//$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.6.3/fonts";
+$fa-font-path: $font-path !default;
